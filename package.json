@@ -1,0 +1,19 @@
+{
+  "name": "tapinator-desktop",
+  "version": "0.1.0",
+  "description": "The desktop editor application for the Tapinator.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": "https://github.com/nathanagood/tapinator-desktop",
+  "keywords": [
+    "Electron",
+    "Tapinator"
+  ],
+  "author": "GitHub",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "electron": "^11.0.3"
+  }
+}
