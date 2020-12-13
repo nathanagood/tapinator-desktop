@@ -1,19 +1,77 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-    <title>Tapinator</title>
-  </head>
-  <body>
-    <h1>Hello World!</h1>
-    We are using Node.js <span id="node-version"></span>,
-    Chromium <span id="chrome-version"></span>,
-    and Electron <span id="electron-version"></span>.
 
-    <!-- You can also require other files to run in this process -->
-    <script src="./renderer.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+  <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+  <title>Tapinator</title>
+</head>
+
+<body>
+  <nav class="nav">
+    <header class="nav-header">
+      <h1 class="nav-header">Taps</h1>
+    </header>
+    <div class="nav-item">
+      <h2>Nate's Most Amazing API</h2>
+    </div>
+    <div class="add-button">
+      <button class="nav-button">+</button>
+    </div>
+    <footer class="nav-footer">
+      <button class="settings-button">Settings</button>
+    </footer>
+  </nav>
+
+  <main class="content">
+    <section id="settings">
+      <label class="settings-label" id="api-url-label" for="api-url">API URL:</label>
+      <input class="settings-input" type="text" id="api-url" name="api-url">
+    </section>
+    <!--
+      {
+    "id": "5",
+    "name": "Nate IPA",
+    "tag": "IPA",
+    "description": "A really nummy IPA that is so hoppy your face will blow up.",
+    "tapNumber": 1,
+    "originalGravity": 7.00,
+    "color": "Amber",
+    "ibu": 1700.0,
+    "calories": 300,
+    "abv": 17.8
+}
+    -->
+    <section id="tap-detail">
+      <div class="input-group">
+        <label class="tap-label" id="tname-label" for="tpos">Tap position:</label>
+        <select class="tap-select" name="tpos" id="tpos">
+          <option value="1">1</option>
+        </select>      
+      </div>
+      <div class="input-group">
+        <label class="tap-label" for="tname">Name:</label>
+        <input class="tap-smalltext" type="text" id="tname" name="tname">
+      </div>
+      <div class="input-group">
+        <label class="tap-label" for="tdesc">Description:</label>
+        <input class="tap-bigtext" type="text" id="tdesc" name="tdesc">
+      </div>
+      <div class="input-group">
+        <label class="tap-label" for="tog">OG:</label>
+        <input class="tap-smalltext" type="text" id="tog" name="tog">
+      </div>
+      <div class="input-group">
+        <label class="tap-label" for="tcol">OG:</label>
+        <input class="tap-smalltext" type="text" id="tcol" name="tcol">
+      </div>
+    </section>
+  </main>
+
+  <!-- You can also require other files to run in this process -->
+  <script src="./renderer.js"></script>
+</body>
+
 </html>
