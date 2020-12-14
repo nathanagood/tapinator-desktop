@@ -1,0 +1,30 @@
+.content {
+    flex      : 1;
+    position  : relative;
+    overflow  : hidden;
+    visibility: hidden;
+    opacity   : 0;
+    width     : 300px;
+}
+
+.content.is-shown {
+    visibility: visible;
+    opacity   : 1;
+}
+
+main {
+    display: inline-block;
+}
+
+body {
+    border 0px;
+    height: 100%;
+    display: flex;
+    margin: 0px;
+}
+
+html {
+    font-family: 'BlinkMacSystemFont', 'Lucida Grande', 'Segoe UI', Ubuntu, Cantarell, sans-serif;
+    font-size  : 14px;
+    line-height: 1.5;
+}

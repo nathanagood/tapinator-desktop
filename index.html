@@ -3,6 +3,9 @@
 
 <head>
   <meta charset="UTF-8">
+  <link rel="stylesheet" href="assets/css/global.css">
+  <link rel="stylesheet" href="assets/css/nav.css">
+
   <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
   <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
@@ -10,12 +13,12 @@
 </head>
 
 <body>
-  <nav class="nav">
+  <nav class="nav is-shown">
     <header class="nav-header">
       <h1 class="nav-header">Taps</h1>
     </header>
     <div class="nav-item">
-      <h2>Nate's Most Amazing API</h2>
+      <h2>Nate's Most Amazing IPA</h2>
     </div>
     <div class="add-button">
       <button class="nav-button">+</button>
@@ -25,18 +28,17 @@
     </footer>
   </nav>
 
-  <main class="content">
+  <main class="content is-shown">
     <section id="settings">
       <label class="settings-label" id="api-url-label" for="api-url">API URL:</label>
       <input class="settings-input" type="text" id="api-url" name="api-url">
     </section>
     <!--
       {
-    "id": "5",
+    "position": 1,
     "name": "Nate IPA",
     "tag": "IPA",
     "description": "A really nummy IPA that is so hoppy your face will blow up.",
-    "tapNumber": 1,
     "originalGravity": 7.00,
     "color": "Amber",
     "ibu": 1700.0,
